@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -59,10 +60,12 @@ const App: React.FC = () => {
       <ContactForm />
       <Footer />
 
-      {/* Vercel Analytics */}
+      {/* ✅ Tracking */}
       <Analytics />
-      
+      <SpeedInsights />
+
     </ThemeProvider>
+    
   );
 };
 
