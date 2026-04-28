@@ -1,5 +1,7 @@
 import React from "react";
 import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
+import { Analytics } from "@vercel/analytics/react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -44,6 +46,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      
       <Navbar />
       <Hero />
       <WhyChooseUs />
@@ -55,7 +58,10 @@ const App: React.FC = () => {
       <GetInTouch />
       <ContactForm />
       <Footer />
-    
+
+      {/* Vercel Analytics */}
+      <Analytics />
+      
     </ThemeProvider>
   );
 };
